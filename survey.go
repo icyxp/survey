@@ -1,15 +1,20 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/chzyer/readline"
+)
+
 type Prompt interface {
-	Prompt() string
-	HandleInput(line []rune, pos int, key rune) (newLine []rune, newPos int, ok bool)
+	Prompt(*readline.Instance) (string, error)
 }
 
 func main() {
 
 	// a list of prompts to play with
 	var survey = []Prompt{
-		&Password{"Hello"},
+		&Input{"Hello"},
 	}
 
 	// grab the readline instance
@@ -18,26 +23,19 @@ func main() {
 		panic(err)
 	}
 
-	// foo := ""
-
 	// keep prompting the user
 	for _, prompt := range survey {
-		// make sure it uses the correct listener
-		rl.Config.SetListener(prompt.HandleInput)
-		// and the correct prompt
-		rl.SetPrompt(prompt.Prompt())
 		// get the next line from the user
-		_, err := rl.Readline()
-		// clear the prompt
-		rl.SetPrompt("")
-
+		line, err := prompt.Prompt(rl)
 		// if there was an error
 		if err != nil {
 			panic(err)
 		}
-		// foo = line
-		// fmt.Print("responded with ", line)
-	}
 
-	// fmt.Println(foo)
+		fmt.Println("You responded with", line)
+
+	}
+	// now that we are done asking questions, we need to close the readline terminal
+	rl.Close()
+
 }
