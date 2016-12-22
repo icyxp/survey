@@ -14,7 +14,7 @@ func main() {
 
 	// a list of prompts to play with
 	var survey = []Prompt{
-		&Password{"Please enter your password:", true},
+		&Password{"Please enter your password:", false},
 	}
 
 	// grab the readline instance

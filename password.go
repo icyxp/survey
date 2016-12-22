@@ -16,7 +16,7 @@ func (p *Password) handleInput(line []rune, pos int, key rune) (newLine []rune, 
 		fmt.Print("*")
 	}
 	// fmt.Println(line)
-	return []rune("*"), pos - 1, false
+	return line, pos - 1, false
 }
 
 func (p *Password) Prompt(rl *readline.Instance) (line string, err error) {
