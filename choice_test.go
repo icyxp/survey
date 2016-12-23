@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 func TestCanFormatChoiceOptions(t *testing.T) {

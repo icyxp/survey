@@ -3,8 +3,7 @@ package survey
 import (
 	"fmt"
 	"os"
-	// tm "github.com/buger/goterm"
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 // Validator is a function passed to a Question in order to redefine
@@ -85,6 +84,7 @@ func Ask(qs []*Question) (map[string]string, error) {
 			return nil, err
 		}
 		// add it to the map
+        fmt.Print(format.WarnColor, `The result of the value you confirm is "` + ans + `"` , format.ResetFormat, "\n")
 		res[q.Name] = ans
 	}
 	// return the response

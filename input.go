@@ -7,7 +7,7 @@ import (
 	tm "github.com/buger/goterm"
 	"os"
 
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 // Input is a regular text input that prints each character the user types on the screen

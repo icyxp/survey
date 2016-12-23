@@ -6,7 +6,7 @@ import (
 	tm "github.com/buger/goterm"
 	"strings"
 
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 // Choice is a prompt that presents a list of various options to the user

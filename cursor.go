@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 type cursorCoordinate struct {

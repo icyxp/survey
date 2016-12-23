@@ -3,7 +3,7 @@ package survey
 import (
 	"fmt"
 
-	"github.com/alecaivazis/survey/format"
+	"github.com/icyxp/survey/format"
 )
 
 // Password is like a normal Input but the text shows up as *'s and

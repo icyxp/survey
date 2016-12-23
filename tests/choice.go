@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/alecaivazis/survey"
-	"github.com/alecaivazis/survey/tests/util"
+	"github.com/icyxp/survey"
+	"github.com/icyxp/survey/tests/util"
 )
 
 var table = []TestUtil.TestTableEntry{

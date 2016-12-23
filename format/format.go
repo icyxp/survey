@@ -12,5 +12,6 @@ var (
 	ResetFormat       = chalk.Reset
 	QuestionColor     = chalk.Green
 	ErrorColor        = chalk.Red
+    WarnColor         = chalk.Yellow
 	DefaultColor      = "\u001b[37m"
 )

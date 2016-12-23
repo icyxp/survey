@@ -3,7 +3,7 @@ package TestUtil
 import (
 	"fmt"
 
-	"github.com/alecaivazis/survey"
+	"github.com/icyxp/survey"
 )
 
 type TestTableEntry struct {
